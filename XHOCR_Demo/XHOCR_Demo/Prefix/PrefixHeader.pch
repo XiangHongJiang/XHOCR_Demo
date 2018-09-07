@@ -1,0 +1,21 @@
+//
+//  PrefixHeader.pch
+//  XHOCR_Demo
+//
+//  Created by MrYeL on 2018/9/7.
+//  Copyright © 2018年 MrYeL. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <MGIDCard/MGIDCard.h>//OCR
+#import <MGBaseKit/MGImage.h>//OCR
+#import <MGLivenessDetection/MGLivenessDetection.h>//OCR
+#import "CardScaningView.h"//OCR
+
+#import "XHTools.h"
+#import "UIImage+AD.h"
+#import "NSString+Extension.h"
+
+#endif /* PrefixHeader_pch */

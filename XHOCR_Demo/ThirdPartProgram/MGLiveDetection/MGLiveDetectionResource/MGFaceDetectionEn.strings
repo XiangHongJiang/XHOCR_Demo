@@ -1,0 +1,31 @@
+/* 
+  MGFaceDetection.strings
+  MegLiveDemo
+
+  Created by Megvii on 2017/5/26.
+  Copyright © 2017Year megvii. All rights reserved.
+*/
+
+"face_check_error1" = "Keep your phone vertically";
+"face_check_error2" = "Face not found";
+"face_check_error3" = "Face not found";
+"face_check_error4" = "Face not found";
+"face_check_error5" = "Face too dark";
+"face_check_error6" = "Face too bright";
+"face_check_error7" = "Face too small";
+"face_check_error8" = "Face too large";
+"face_check_error9" = "Please avoid side light or backlight";
+"face_check_error10" = "Face out of rect";
+"face_check_error11" = "Keep the pose";
+"face_check_error12" = "Show me your eyes";
+"face_check_error13" = "Show me your mouth";
+
+"face_check_title" = "Finish";
+"face_check_title1" = "Keep your face in the frame";
+"face_check_title2" = "Keep the pose";
+"face_check_title3" = "Detect finish";
+
+"face_check_eye" = "Blink";
+"face_check_mouse" = "Open your mouth";
+"face_check_header_3" = "Shake your head";
+"face_check_header_1" = "Node your head";

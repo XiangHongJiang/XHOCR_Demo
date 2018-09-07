@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		FC3DE53D214243570059E187 /* OCRExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE53C214243570059E187 /* OCRExampleTableViewController.m */; };
+		FC3DE541214249F90059E187 /* MGBaseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DE544214249F90059E187 /* MGBaseKit.framework */; };
+		FC3DE542214249F90059E187 /* MGIDCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DE545214249F90059E187 /* MGIDCard.framework */; };
+		FC3DE543214249F90059E187 /* MGLivenessDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DE546214249F90059E187 /* MGLivenessDetection.framework */; };
+		FC3DE54821424A030059E187 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DE54721424A030059E187 /* libc++.tbd */; };
+		FC3DE55F214258DA0059E187 /* libbankcard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DE54F214258DA0059E187 /* libbankcard.a */; };
+		FC3DE560214258DA0059E187 /* zocr0.lib in Resources */ = {isa = PBXBuildFile; fileRef = FC3DE553214258DA0059E187 /* zocr0.lib */; };
+		FC3DE561214258DA0059E187 /* libexidcardios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DE555214258DA0059E187 /* libexidcardios.a */; };
+		FC3DE562214258DA0059E187 /* CardScaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE558214258DA0059E187 /* CardScaningView.m */; };
+		FC3DE563214258DA0059E187 /* RectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE55A214258DA0059E187 /* RectManager.m */; };
+		FC3DE564214258DA0059E187 /* TBOCRVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE55C214258DA0059E187 /* TBOCRVC.m */; };
+		FC3DE56921425E990059E187 /* UIImage+AD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE56721425E990059E187 /* UIImage+AD.m */; };
+		FC3DE56C21425ED50059E187 /* XHTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE56B21425ED50059E187 /* XHTools.m */; };
+		FC3DE56F21425F390059E187 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE56D21425F380059E187 /* NSString+Extension.m */; };
 		FC6579132101709400055C91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6579122101709400055C91 /* AppDelegate.m */; };
 		FC6579162101709400055C91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6579152101709400055C91 /* ViewController.m */; };
 		FC6579192101709400055C91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6579172101709400055C91 /* Main.storyboard */; };
@@ -37,6 +50,31 @@
 /* Begin PBXFileReference section */
 		FC3DE53B214243570059E187 /* OCRExampleTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCRExampleTableViewController.h; sourceTree = "<group>"; };
 		FC3DE53C214243570059E187 /* OCRExampleTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCRExampleTableViewController.m; sourceTree = "<group>"; };
+		FC3DE53F214249D00059E187 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FC3DE544214249F90059E187 /* MGBaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MGBaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3DE545214249F90059E187 /* MGIDCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MGIDCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3DE546214249F90059E187 /* MGLivenessDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MGLivenessDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3DE54721424A030059E187 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		FC3DE54B214258DA0059E187 /* BankCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCard.h; sourceTree = "<group>"; };
+		FC3DE54C214258DA0059E187 /* exbankcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcard.h; sourceTree = "<group>"; };
+		FC3DE54E214258DA0059E187 /* exbankcardcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcardcore.h; sourceTree = "<group>"; };
+		FC3DE54F214258DA0059E187 /* libbankcard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbankcard.a; sourceTree = "<group>"; };
+		FC3DE551214258DA0059E187 /* commondef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commondef.h; sourceTree = "<group>"; };
+		FC3DE553214258DA0059E187 /* zocr0.lib */ = {isa = PBXFileReference; lastKnownFileType = file; path = zocr0.lib; sourceTree = "<group>"; };
+		FC3DE554214258DA0059E187 /* excards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = excards.h; sourceTree = "<group>"; };
+		FC3DE555214258DA0059E187 /* libexidcardios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libexidcardios.a; sourceTree = "<group>"; };
+		FC3DE557214258DA0059E187 /* CardScaningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardScaningView.h; sourceTree = "<group>"; };
+		FC3DE558214258DA0059E187 /* CardScaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardScaningView.m; sourceTree = "<group>"; };
+		FC3DE559214258DA0059E187 /* RectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectManager.h; sourceTree = "<group>"; };
+		FC3DE55A214258DA0059E187 /* RectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectManager.m; sourceTree = "<group>"; };
+		FC3DE55B214258DA0059E187 /* TBOCRVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBOCRVC.h; sourceTree = "<group>"; };
+		FC3DE55C214258DA0059E187 /* TBOCRVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBOCRVC.m; sourceTree = "<group>"; };
+		FC3DE56721425E990059E187 /* UIImage+AD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AD.m"; sourceTree = "<group>"; };
+		FC3DE56821425E990059E187 /* UIImage+AD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AD.h"; sourceTree = "<group>"; };
+		FC3DE56A21425ED50059E187 /* XHTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XHTools.h; sourceTree = "<group>"; };
+		FC3DE56B21425ED50059E187 /* XHTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHTools.m; sourceTree = "<group>"; };
+		FC3DE56D21425F380059E187 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		FC3DE56E21425F390059E187 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		FC65790E2101709400055C91 /* XHOCR_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHOCR_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6579112101709400055C91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC6579122101709400055C91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +96,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3DE55F214258DA0059E187 /* libbankcard.a in Frameworks */,
+				FC3DE54821424A030059E187 /* libc++.tbd in Frameworks */,
+				FC3DE541214249F90059E187 /* MGBaseKit.framework in Frameworks */,
+				FC3DE542214249F90059E187 /* MGIDCard.framework in Frameworks */,
+				FC3DE543214249F90059E187 /* MGLivenessDetection.framework in Frameworks */,
+				FC3DE561214258DA0059E187 /* libexidcardios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,11 +122,105 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC3DE53E214249BE0059E187 /* Prefix */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE53F214249D00059E187 /* PrefixHeader.pch */,
+			);
+			path = Prefix;
+			sourceTree = "<group>";
+		};
+		FC3DE540214249F90059E187 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE54721424A030059E187 /* libc++.tbd */,
+				FC3DE544214249F90059E187 /* MGBaseKit.framework */,
+				FC3DE545214249F90059E187 /* MGIDCard.framework */,
+				FC3DE546214249F90059E187 /* MGLivenessDetection.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC3DE549214258DA0059E187 /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE54A214258DA0059E187 /* bank_io */,
+				FC3DE550214258DA0059E187 /* libexidcard */,
+				FC3DE556214258DA0059E187 /* View */,
+			);
+			path = OCR;
+			sourceTree = "<group>";
+		};
+		FC3DE54A214258DA0059E187 /* bank_io */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE54B214258DA0059E187 /* BankCard.h */,
+				FC3DE54C214258DA0059E187 /* exbankcard.h */,
+				FC3DE54D214258DA0059E187 /* exbankcardcore */,
+			);
+			path = bank_io;
+			sourceTree = "<group>";
+		};
+		FC3DE54D214258DA0059E187 /* exbankcardcore */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE54E214258DA0059E187 /* exbankcardcore.h */,
+				FC3DE54F214258DA0059E187 /* libbankcard.a */,
+			);
+			path = exbankcardcore;
+			sourceTree = "<group>";
+		};
+		FC3DE550214258DA0059E187 /* libexidcard */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE551214258DA0059E187 /* commondef.h */,
+				FC3DE552214258DA0059E187 /* dicts */,
+				FC3DE554214258DA0059E187 /* excards.h */,
+				FC3DE555214258DA0059E187 /* libexidcardios.a */,
+			);
+			path = libexidcard;
+			sourceTree = "<group>";
+		};
+		FC3DE552214258DA0059E187 /* dicts */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE553214258DA0059E187 /* zocr0.lib */,
+			);
+			path = dicts;
+			sourceTree = "<group>";
+		};
+		FC3DE556214258DA0059E187 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE557214258DA0059E187 /* CardScaningView.h */,
+				FC3DE558214258DA0059E187 /* CardScaningView.m */,
+				FC3DE559214258DA0059E187 /* RectManager.h */,
+				FC3DE55A214258DA0059E187 /* RectManager.m */,
+				FC3DE55B214258DA0059E187 /* TBOCRVC.h */,
+				FC3DE55C214258DA0059E187 /* TBOCRVC.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC3DE56621425E8F0059E187 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FC3DE56E21425F390059E187 /* NSString+Extension.h */,
+				FC3DE56D21425F380059E187 /* NSString+Extension.m */,
+				FC3DE56821425E990059E187 /* UIImage+AD.h */,
+				FC3DE56721425E990059E187 /* UIImage+AD.m */,
+				FC3DE56A21425ED50059E187 /* XHTools.h */,
+				FC3DE56B21425ED50059E187 /* XHTools.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		FC6579052101709400055C91 = {
 			isa = PBXGroup;
 			children = (
 				FC6579102101709400055C91 /* XHOCR_Demo */,
 				FC65790F2101709400055C91 /* Products */,
+				FC3DE540214249F90059E187 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +237,8 @@
 		FC6579102101709400055C91 /* XHOCR_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				FC3DE56621425E8F0059E187 /* Utils */,
+				FC3DE53E214249BE0059E187 /* Prefix */,
 				FC6579432101709800055C91 /* Demo */,
 				FC6579112101709400055C91 /* AppDelegate.h */,
 				FC6579122101709400055C91 /* AppDelegate.m */,
@@ -144,6 +284,7 @@
 		FC8B937A2106F082006F30FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC3DE549214258DA0059E187 /* OCR */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3DE560214258DA0059E187 /* zocr0.lib in Resources */,
 				FC65791E2101709400055C91 /* LaunchScreen.storyboard in Resources */,
 				FC65791B2101709400055C91 /* Assets.xcassets in Resources */,
 				FC6579192101709400055C91 /* Main.storyboard in Resources */,
@@ -283,9 +425,15 @@
 			files = (
 				FC6579162101709400055C91 /* ViewController.m in Sources */,
 				FC6579212101709400055C91 /* main.m in Sources */,
+				FC3DE563214258DA0059E187 /* RectManager.m in Sources */,
+				FC3DE562214258DA0059E187 /* CardScaningView.m in Sources */,
 				FC3DE53D214243570059E187 /* OCRExampleTableViewController.m in Sources */,
+				FC3DE56F21425F390059E187 /* NSString+Extension.m in Sources */,
 				FC8B93722106EC1F006F30FF /* CrashManager.m in Sources */,
 				FC6579132101709400055C91 /* AppDelegate.m in Sources */,
+				FC3DE56C21425ED50059E187 /* XHTools.m in Sources */,
+				FC3DE56921425E990059E187 /* UIImage+AD.m in Sources */,
+				FC3DE564214258DA0059E187 /* TBOCRVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,9 +596,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EA72JG3VB5;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XHOCR_Demo/Prefix/PrefixHeader.pch";
 				INFOPLIST_FILE = XHOCR_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XHOCR_Demo/Demo/Model/OCR/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/XHOCR_Demo/Demo/Model/OCR/libexidcard",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "MrYeL.VoiceWaver-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,9 +619,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EA72JG3VB5;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XHOCR_Demo/Prefix/PrefixHeader.pch";
 				INFOPLIST_FILE = XHOCR_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XHOCR_Demo/Demo/Model/OCR/bank_io/exbankcardcore",
+					"$(PROJECT_DIR)/XHOCR_Demo/Demo/Model/OCR/libexidcard",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "MrYeL.VoiceWaver-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

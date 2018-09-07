@@ -41,6 +41,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>我们需要使用您的相机， 进行身份证识别，人脸识别，拍摄合同照片等相关功能。</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要访问您的相册，选择身份证照片</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>需要打开麦克风才能录音</string>
 </dict>
