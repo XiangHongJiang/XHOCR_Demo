@@ -8,7 +8,7 @@
 
 #import "OCRExampleTableViewController.h"
 
-#import "TBOCRVC.h"
+#import "XHOCRVC.h"
 #import "RectManager.h"
 
 @interface OCRExampleTableViewController ()
@@ -71,16 +71,16 @@
     
     if (!TARGET_IPHONE_SIMULATOR) {
         
-        TBOCRVC *ocrVC;
+        XHOCRVC *ocrVC;
         __weak typeof(self) weakSelf = self;
 
-        ocrVC = [[TBOCRVC alloc]initWithOcrType:TBOCRTypeFace];
+        ocrVC = [[XHOCRVC alloc]initWithOcrType:XHOCRTypeFace];
         UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:ocrVC];
         [self presentViewController:navi animated:true completion:nil];
         
-        ocrVC.didScanSuc = ^(TBOCRInfo *info) {
+        ocrVC.didScanSuc = ^(XHOCRInfo *info) {
 
-            [weakSelf showAlertWithData:info withType:TBOCRTypeFace];
+            [weakSelf showAlertWithData:info withType:XHOCRTypeFace];
             
         };
         
@@ -91,15 +91,15 @@
 - (void)getBankCardInfo {//获取银行卡信息
     if (!TARGET_IPHONE_SIMULATOR) {
         
-        TBOCRVC *ocrVC;
+        XHOCRVC *ocrVC;
         __weak typeof(self) weakSelf = self;
-        ocrVC = [[TBOCRVC alloc]initWithOcrType:TBOCRTypeBank];
+        ocrVC = [[XHOCRVC alloc]initWithOcrType:XHOCRTypeBank];
         UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:ocrVC];
         [self presentViewController:navi animated:true completion:nil];
         
-        ocrVC.didScanSuc = ^(TBOCRInfo *info) {
+        ocrVC.didScanSuc = ^(XHOCRInfo *info) {
             
-            [weakSelf showAlertWithData:info withType:TBOCRTypeBank];
+            [weakSelf showAlertWithData:info withType:XHOCRTypeBank];
 
             
         };
@@ -107,15 +107,15 @@
     }
     
 }
-- (void)showAlertWithData:(TBOCRInfo *)info withType:(TBOCRType)type {
+- (void)showAlertWithData:(XHOCRInfo *)info withType:(XHOCRType)type {
     
     NSString *message = nil;
 
-    if (type == TBOCRTypeFace) {
+    if (type == XHOCRTypeFace) {
 
         message = [NSString stringWithFormat:@"\n正面\n姓名：%@\n性别：%@\n民族：%@\n住址：%@\n公民身份证号码：%@\n\n反面\n签发机关：%@\n有效期限：%@",info.name,info.gender,info.race,info.address,info.idCardNumber,info.issuedBy,info.validDate];
         
-    }else if (type == TBOCRTypeBank) {
+    }else if (type == XHOCRTypeBank) {
         
         message = [NSString stringWithFormat:@"\n卡号：%@\n开户行：%@\n",info.bankNo,info.bankName];
     };

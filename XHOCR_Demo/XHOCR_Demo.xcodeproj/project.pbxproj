@@ -17,10 +17,10 @@
 		FC3DE561214258DA0059E187 /* libexidcardios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3DE555214258DA0059E187 /* libexidcardios.a */; };
 		FC3DE562214258DA0059E187 /* CardScaningView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE558214258DA0059E187 /* CardScaningView.m */; };
 		FC3DE563214258DA0059E187 /* RectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE55A214258DA0059E187 /* RectManager.m */; };
-		FC3DE564214258DA0059E187 /* TBOCRVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE55C214258DA0059E187 /* TBOCRVC.m */; };
 		FC3DE56921425E990059E187 /* UIImage+AD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE56721425E990059E187 /* UIImage+AD.m */; };
 		FC3DE56C21425ED50059E187 /* XHTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE56B21425ED50059E187 /* XHTools.m */; };
 		FC3DE56F21425F390059E187 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE56D21425F380059E187 /* NSString+Extension.m */; };
+		FC3DE5722142695A0059E187 /* XHOCRVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3DE5712142695A0059E187 /* XHOCRVC.m */; };
 		FC6579132101709400055C91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6579122101709400055C91 /* AppDelegate.m */; };
 		FC6579162101709400055C91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6579152101709400055C91 /* ViewController.m */; };
 		FC6579192101709400055C91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6579172101709400055C91 /* Main.storyboard */; };
@@ -67,14 +67,14 @@
 		FC3DE558214258DA0059E187 /* CardScaningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardScaningView.m; sourceTree = "<group>"; };
 		FC3DE559214258DA0059E187 /* RectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectManager.h; sourceTree = "<group>"; };
 		FC3DE55A214258DA0059E187 /* RectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectManager.m; sourceTree = "<group>"; };
-		FC3DE55B214258DA0059E187 /* TBOCRVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBOCRVC.h; sourceTree = "<group>"; };
-		FC3DE55C214258DA0059E187 /* TBOCRVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBOCRVC.m; sourceTree = "<group>"; };
 		FC3DE56721425E990059E187 /* UIImage+AD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AD.m"; sourceTree = "<group>"; };
 		FC3DE56821425E990059E187 /* UIImage+AD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AD.h"; sourceTree = "<group>"; };
 		FC3DE56A21425ED50059E187 /* XHTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XHTools.h; sourceTree = "<group>"; };
 		FC3DE56B21425ED50059E187 /* XHTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHTools.m; sourceTree = "<group>"; };
 		FC3DE56D21425F380059E187 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		FC3DE56E21425F390059E187 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		FC3DE5702142695A0059E187 /* XHOCRVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XHOCRVC.h; sourceTree = "<group>"; };
+		FC3DE5712142695A0059E187 /* XHOCRVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHOCRVC.m; sourceTree = "<group>"; };
 		FC65790E2101709400055C91 /* XHOCR_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHOCR_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6579112101709400055C91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC6579122101709400055C91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 				FC3DE558214258DA0059E187 /* CardScaningView.m */,
 				FC3DE559214258DA0059E187 /* RectManager.h */,
 				FC3DE55A214258DA0059E187 /* RectManager.m */,
-				FC3DE55B214258DA0059E187 /* TBOCRVC.h */,
-				FC3DE55C214258DA0059E187 /* TBOCRVC.m */,
+				FC3DE5702142695A0059E187 /* XHOCRVC.h */,
+				FC3DE5712142695A0059E187 /* XHOCRVC.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -424,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6579162101709400055C91 /* ViewController.m in Sources */,
+				FC3DE5722142695A0059E187 /* XHOCRVC.m in Sources */,
 				FC6579212101709400055C91 /* main.m in Sources */,
 				FC3DE563214258DA0059E187 /* RectManager.m in Sources */,
 				FC3DE562214258DA0059E187 /* CardScaningView.m in Sources */,
@@ -433,7 +434,6 @@
 				FC6579132101709400055C91 /* AppDelegate.m in Sources */,
 				FC3DE56C21425ED50059E187 /* XHTools.m in Sources */,
 				FC3DE56921425E990059E187 /* UIImage+AD.m in Sources */,
-				FC3DE564214258DA0059E187 /* TBOCRVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

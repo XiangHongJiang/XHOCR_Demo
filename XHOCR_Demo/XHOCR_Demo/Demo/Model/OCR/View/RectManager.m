@@ -1,9 +1,9 @@
 //
 //  RectManager.m
-//  
+//  XHOCR_Demo
 //
-//  Created by  on 08/01/2018.
-//  Copyright © 2018 . All rights reserved.
+//  Created by MrYeL on 2018/9/7.
+//  Copyright © 2018年 MrYeL. All rights reserved.
 //
 
 #import "RectManager.h"
@@ -147,39 +147,11 @@ CGRect combinRect(CGRect A, CGRect B)
 }
 
 
-+ (void)getOCRInfoWithData:(NSData *)imageData type:(TBOCRType)type res:(void (^)(id ))res{
++ (void)getOCRInfoWithData:(NSData *)imageData type:(XHOCRType)type res:(void (^)(id ))res{
 //    [SVProgressHUD showWithStatus:@"身份证识别中..."];
-//    [[TBNetAPIClient sharedClient] POSTWithURLStr:kDocFileUpload imageData:imageData requestResult:^(NSInteger code, NSDictionary *responseObject) {
-//        if (code != 0) {
-//            [TBProgressHUD showErrorWithtitle:responseObject[HTTPErrorMessageKey]];
-//            return;
-//        }
-//
-//        NSString *imageId = responseObject[@"body"][kImageName];
-//        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:@{@"imageType" : @1}];
-//        switch (type) {
-//            case TBOCRTypeFace:
-//                dict[@"frontImage"] = imageId;
-//                break;
-//            case TBOCRTypeNation:
-//                dict[@"backImage"] = imageId;
-//                break;
-//            default:
-//                break;
-//        }
-//        [[TBNetAPIClient sharedClient] POSTWithURLStr:@"order/getFaceIdOCRInfo" parameters:dict requestResult:^(NSInteger code, NSDictionary *responseObj) {
-//            if (code != 0) {
-//                [SVProgressHUD showErrorWithStatus:responseObj[HTTPErrorMessageKey]];
-//                return;
-//            }
-//            if (res) {
-//                [SVProgressHUD dismiss];
-//                TBOCRInfo *ocrInfo = [TBOCRInfo modelWithDictionary:responseObj];
-//                ocrInfo.imageId = imageId;
-//                res(ocrInfo);
-//            }
-//        }];
-//    }];
+    
+// upload
+
 }
 
 @end

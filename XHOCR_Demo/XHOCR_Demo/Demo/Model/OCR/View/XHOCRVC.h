@@ -1,16 +1,15 @@
 //
-//  TBOCRVC.h
-//  
+//  XHOCRVC.h
+//  XHOCR_Demo
 //
-//  Created by  on 08/01/2018.
-//  Copyright © 2018 . All rights reserved.
+//  Created by MrYeL on 2018/9/7.
+//  Copyright © 2018年 MrYeL. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+@interface XHOCRInfo : NSObject
 
-
-@interface TBOCRInfo : NSObject
-
-@property (nonatomic, assign) TBOCRType type; //1:正面  2:反面
+@property (nonatomic, assign) XHOCRType type; //1:正面  2:反面
 @property (nonatomic, copy) NSString *idCardNumber; //身份证号
 @property (nonatomic, copy) NSString *name; //姓名
 @property (nonatomic, copy) NSString *gender; //性别
@@ -27,10 +26,9 @@
 @property (nonatomic, copy) NSString *bankNo;
 @property (nonatomic, copy) NSString *bankName;
 @end
+@interface XHOCRVC : UIViewController
 
-@interface TBOCRVC : UIViewController
-- (instancetype)initWithOcrType:(TBOCRType)type;
+- (instancetype)initWithOcrType:(XHOCRType)type;
 
-@property (nonatomic , copy)void (^didScanSuc)(TBOCRInfo *info);
+@property (nonatomic , copy)void (^didScanSuc)(XHOCRInfo *info);
 @end
-

@@ -1,9 +1,9 @@
 //
 //  CardScaningView.m
-//  
+//  XHOCR_Demo
 //
-//  Created by  on 08/01/2018.
-//  Copyright © 2018 . All rights reserved.
+//  Created by MrYeL on 2018/9/7.
+//  Copyright © 2018年 MrYeL. All rights reserved.
 //
 
 #import "CardScaningView.h"
@@ -26,10 +26,10 @@
     NSTimer *_timer;
 }
 
-@property (nonatomic , assign)TBOCRType OCRType;
+@property (nonatomic , assign)XHOCRType OCRType;
 @end
 @implementation CardScaningView
-- (instancetype)initWithOcrType:(TBOCRType)ocrType{
+- (instancetype)initWithOcrType:(XHOCRType)ocrType{
     if ([super initWithFrame:[UIScreen mainScreen].bounds]) {
         self.backgroundColor = [UIColor clearColor];
         self.OCRType = ocrType;
@@ -78,14 +78,14 @@
     
     NSString *text;
     switch (self.OCRType) {
-        case TBOCRTypeBank:
+        case XHOCRTypeBank:
         {
             text = @"将银行卡至于此区域内，扫描";
         }
             break;
             
         default:
-          text = self.OCRType == TBOCRTypeFace ? @"将身份证人像面置于此区域内，头像对准，扫描" : @"将身份证置于此区域内，国徽对准，扫描";
+          text = self.OCRType == XHOCRTypeFace ? @"将身份证人像面置于此区域内，头像对准，扫描" : @"将身份证置于此区域内，国徽对准，扫描";
             break;
     }
     
@@ -97,7 +97,7 @@
      */
     
     // 人像
-    if (self.OCRType == TBOCRTypeNation) {
+    if (self.OCRType == XHOCRTypeNation) {
         CGFloat X = rect.size.width + rect.origin.x - KRealWidth5(94);
         CGFloat Y = rect.origin.y + KRealWidth5(20);
         UIImageView *headIV = [[UIImageView alloc] initWithFrame:CGRectMake(X, Y, KRealWidth5(80), KRealWidth5(80))];
@@ -106,7 +106,7 @@
         headIV.contentMode = UIViewContentModeScaleAspectFill;
         [self addSubview:headIV];
     }
-    else if(self.OCRType == TBOCRTypeFace){
+    else if(self.OCRType == XHOCRTypeFace){
         UIImageView *headIV = [[UIImageView alloc] initWithFrame:_facePathRect];
         headIV.image = [UIImage imageNamed:@"idcard_first_head"];
         headIV.transform = CGAffineTransformMakeRotation(M_PI * 0.5);
@@ -147,7 +147,7 @@
 - (void)drawRect:(CGRect)rect {
     rect = _IDCardScanningWindowLayer.frame;
     
-    if (self.OCRType == TBOCRTypeFace) {
+    if (self.OCRType == XHOCRTypeFace) {
         // 人像提示框
         UIBezierPath *facePath = [UIBezierPath bezierPathWithRect:_facePathRect];
         facePath.lineWidth = 1.5;

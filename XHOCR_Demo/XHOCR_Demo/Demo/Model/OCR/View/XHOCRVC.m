@@ -1,20 +1,22 @@
 //
-//  TBOCRVC.m
-//  
+//  XHOCRVC.m
+//  XHOCR_Demo
 //
-//  Created by  on 08/01/2018.
-//  Copyright © 2018 . All rights reserved.
+//  Created by MrYeL on 2018/9/7.
+//  Copyright © 2018年 MrYeL. All rights reserved.
 //
 
-#import "TBOCRVC.h"
+#import "XHOCRVC.h"
+
+#import "XHOCRVC.h"
 #import <AVFoundation/AVFoundation.h>
 #import "RectManager.h"
 #import "exbankcard.h"
 #import "excards.h"
 
 
-@interface TBOCRVC ()<AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureMetadataOutputObjectsDelegate>
-@property (nonatomic , assign)TBOCRType ocrType;
+@interface XHOCRVC ()<AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureMetadataOutputObjectsDelegate>
+@property (nonatomic , assign)XHOCRType ocrType;
 
 // 摄像头设备
 @property (nonatomic,strong) AVCaptureDevice *device;
@@ -45,10 +47,10 @@
 
 @end
 
-@implementation TBOCRVC
+@implementation XHOCRVC
 
 
-- (instancetype)initWithOcrType:(TBOCRType)type{
+- (instancetype)initWithOcrType:(XHOCRType)type{
     if ([super init]) {
         self.ocrType = type;
     }
@@ -80,12 +82,12 @@
 }
 
 - (void)initSubViews{
-//    [super initSubViews];
+    //    [super initSubViews];
     CardScaningView *scanView = [[CardScaningView alloc] initWithOcrType:self.ocrType];
     [self.view.layer addSublayer:self.previewLayer];
     [self.view addSubview:scanView];
     self.faceDetectionFrame = scanView.facePathRect;
-    self.navigationItem.title = self.ocrType != TBOCRTypeBank ? @"扫描身份证" : @"扫描银行卡";
+    self.navigationItem.title = self.ocrType != XHOCRTypeBank ? @"扫描身份证" : @"扫描银行卡";
     [self addCloseButton];
 }
 
@@ -190,7 +192,7 @@
             if ([_session canAddOutput:self.videoDataOutput]) {
                 [_session addOutput:self.videoDataOutput];
             }
-            if (self.ocrType == TBOCRTypeFace) {
+            if (self.ocrType == XHOCRTypeFace) {
                 if ([_session canAddOutput:self.metadataOutput]) {
                     [_session addOutput:self.metadataOutput];
                     // 输出格式要放在addOutPut之后，否则奔溃
@@ -218,7 +220,7 @@
 -(dispatch_queue_t)queue {
     if (_queue == nil) {
         _queue = dispatch_queue_create("AVCaptureSession_Start_Running_Queue", DISPATCH_QUEUE_SERIAL);
-//        _queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        //        _queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     }
     return _queue;
 }
@@ -251,15 +253,15 @@
         [self.device lockForConfiguration:nil];// 请求独占访问硬件设备
         
         if (self.isTorchOn) {
-//            self.navigationItem.rightBarButtonItem.image = [[UIImage imageNamed:@"nav_torch_on"] originalImage];
+            //            self.navigationItem.rightBarButtonItem.image = [[UIImage imageNamed:@"nav_torch_on"] originalImage];
             [self.device setTorchMode:AVCaptureTorchModeOn];
         } else {
-//            self.navigationItem.rightBarButtonItem.image = [[UIImage imageNamed:@"nav_torch_off"] originalImage];
+            //            self.navigationItem.rightBarButtonItem.image = [[UIImage imageNamed:@"nav_torch_off"] originalImage];
             [self.device setTorchMode:AVCaptureTorchModeOff];
         }
         [self.device unlockForConfiguration];// 请求解除独占访问硬件设备
     }else {
-//        [TBAlert showWithTitle:@"提示" message:@"您的设备没有闪光设备，不能提供手电筒功能，请检查"];
+        //        [TBAlert showWithTitle:@"提示" message:@"您的设备没有闪光设备，不能提供手电筒功能，请检查"];
     }
 }
 
@@ -269,12 +271,12 @@
     
     // 将AVCaptureViewController的navigationBar调为透明
     [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
-        [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     // 每次展现AVCaptureViewController的界面时，都检查摄像头使用权限
     [self checkAuthorizationStatus];
     // rightBarButtonItem设为原样
     self.torchOn = NO;
-//    self.navigationItem.rightBarButtonItem.image = [[UIImage imageNamed:@"nav_torch_off"] originalImage];
+    //    self.navigationItem.rightBarButtonItem.image = [[UIImage imageNamed:@"nav_torch_off"] originalImage];
 }
 
 #pragma mark - view即将消失时
@@ -331,13 +333,13 @@
 }
 
 -(void)showAuthorizationDenied {
-//    [self showAlertWithSureTitle:@"前往" cancleTitle:@"取消" alertTitle:@"" message:@"请您设置允许APP访问您的相机\n设置>隐私>相机" sureAction:^{
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
-//    }];
+    //    [self showAlertWithSureTitle:@"前往" cancleTitle:@"取消" alertTitle:@"" message:@"请您设置允许APP访问您的相机\n设置>隐私>相机" sureAction:^{
+    //        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+    //    }];
 }
 
 - (void)showAuthorizationRestricted{
-//    [TBAlert showWithTitle:@"提示" message:@"您的手机不支持摄像"];
+    //    [TBAlert showWithTitle:@"提示" message:@"您的手机不支持摄像"];
 }
 
 
@@ -369,7 +371,7 @@
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
 // AVCaptureVideoDataOutput获取实时图像，这个代理方法的回调频率很快，几乎与手机屏幕的刷新频率一样快
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-    if (self.ocrType == TBOCRTypeBank)
+    if (self.ocrType == XHOCRTypeBank)
     {
         
         CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
@@ -389,7 +391,7 @@
             // 身份证信息识别
             
             // 身份证信息识别完毕后，就将videoDataOutput的代理去掉，防止频繁调用AVCaptureVideoDataOutputSampleBufferDelegate方法而引起的“混乱”
-            if (self.ocrType == TBOCRTypeFace) {
+            if (self.ocrType == XHOCRTypeFace) {
                 if (self.videoDataOutput.sampleBufferDelegate) {
                     [self.videoDataOutput setSampleBufferDelegate:nil queue:self.queue];
                 }
@@ -444,7 +446,7 @@
             int xlen;
             int i = 0;
             
-            TBOCRInfo *iDInfo = [TBOCRInfo new];
+            XHOCRInfo *iDInfo = [XHOCRInfo new];
             
             ctype = pResult[i++];
             
@@ -550,13 +552,13 @@
             //            UIImage *image = [UIImage getImageStream:imageBuffer];
             //            __block UIImage *subImg = [UIImage getSubImage:subRect inImage:image];
             
-        
+            
             char *numbers = [RectManager getNumbers];
             
             NSString *numberStr = [NSString stringWithCString:numbers encoding:NSASCIIStringEncoding];
             NSString *bank = [NSString getBankNameByBin:numbers count:charCount];
             
-            TBOCRInfo *model = [TBOCRInfo new];
+            XHOCRInfo *model = [XHOCRInfo new];
             
             model.bankNo = numberStr;
             model.bankName = bank;
@@ -580,30 +582,30 @@
 }
 
 
-- (void)didScanSucActionWithIdInfo:(TBOCRInfo *)iDInfo{
+- (void)didScanSucActionWithIdInfo:(XHOCRInfo *)iDInfo{
     switch (self.ocrType) {
-        case TBOCRTypeFace:
+        case XHOCRTypeFace:
         {
-//            if (iDInfo.idCardNumber.isBlankString == false) {
-//                [TBProgressHUD showErrorWithtitle:@"身份证信息错误"];
-//                return;
-//            }
+            //            if (iDInfo.idCardNumber.isBlankString == false) {
+            //                [TBProgressHUD showErrorWithtitle:@"身份证信息错误"];
+            //                return;
+            //            }
         }
             break;
-        case TBOCRTypeNation:
+        case XHOCRTypeNation:
         {
-//            if (iDInfo.issuedBy.isBlankString == false) {
-//                [TBProgressHUD showErrorWithtitle:@"身份证信息错误"];
-//                return;
-//            }
+            //            if (iDInfo.issuedBy.isBlankString == false) {
+            //                [TBProgressHUD showErrorWithtitle:@"身份证信息错误"];
+            //                return;
+            //            }
         }
             break;
-        case TBOCRTypeBank:
+        case XHOCRTypeBank:
         {
-//            if (iDInfo.bankNo.isBlankString == false) {
-//                [TBProgressHUD showErrorWithtitle:@"银行卡信息错误"];
-//                return;
-//            }
+            //            if (iDInfo.bankNo.isBlankString == false) {
+            //                [TBProgressHUD showErrorWithtitle:@"银行卡信息错误"];
+            //                return;
+            //            }
         }
             break;
         default:
@@ -623,6 +625,6 @@
 
 @end
 
-@implementation TBOCRInfo
+@implementation XHOCRInfo
 
 @end

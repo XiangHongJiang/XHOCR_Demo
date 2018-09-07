@@ -1,9 +1,9 @@
 //
 //  RectManager.h
-//  
+//  XHOCR_Demo
 //
-//  Created by  on 08/01/2018.
-//  Copyright © 2018 . All rights reserved.
+//  Created by MrYeL on 2018/9/7.
+//  Copyright © 2018年 MrYeL. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -21,5 +21,5 @@
 
 + (char *)getNumbers;
 
-+ (void)getOCRInfoWithData:(NSData *)imageData type:(TBOCRType)type res:(void (^)(id ocrInfo))res;
++ (void)getOCRInfoWithData:(NSData *)imageData type:(XHOCRType)type res:(void (^)(id ocrInfo))res;
 @end
